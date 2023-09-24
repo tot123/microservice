@@ -2,18 +2,31 @@
 ext {
     version = [
             "fastjsonVersion"   : "1.2.72",
-            "mybatisPlus" : "3.0.5",
+            "mybatisPlus" : "3.5.0",
+            "mybatisPlusGenerator" : "3.5.1",
+            "freemarker" : "2.3.31",
+            "velocity" : "2.3",
             "mysql" : "5.1.46",
-            "swaggerVersion": "2.7.0",
-            "jjwtVersion": "0.7.0"
+            "swagger": "3.0.0",
+            "knife4j": "3.0.3",
+            "jjwtVersion": "0.7.0",
+            "lombok": "1.18.30",
+            "servlet": "4.0.1"
     ]
+
 
     dependencies = [
             "fastjson"                      : "com.alibaba:fastjson:${version.fastjsonVersion}",
             "mybatis-plus-boot-starter"     : "com.baomidou:mybatis-plus-boot-starter:${version.mybatisPlus}",
+            "mybatis-plus-generator"        : "com.baomidou:mybatis-plus-generator:${version.mybatisPlusGenerator}",
+            "freemarker"                    : "org.freemarker:freemarker:${version.freemarker}",
+            "velocity-engine-core"          : "org.apache.velocity:velocity-engine-core:${version.velocity}",
             "mysql"                         : "mysql:mysql-connector-java:${version.mysql}",
-            "swagger"                       : "io.springfox:springfox-swagger2:${version.swaggerVersion}",
-            "swaggerUI"                     : "io.springfox:springfox-swagger-ui:${version.swaggerVersion}",
-            "jjwt"                          : "io.jsonwebtoken:jjwt:${version.jjwtVersion}"
+            "swagger"                       : "io.springfox:springfox-boot-starter:${version.swagger}",
+            "knife4j"                       : "com.github.xiaoymin:knife4j-spring-boot-starter:${version.knife4j}",
+//            "swaggerUI"                     : "io.springfox:springfox-swagger-ui:${version.swagger}",
+            "jjwt"                          : "io.jsonwebtoken:jjwt:${version.jjwtVersion}",
+            "lombok"                        : "org.projectlombok:lombok:${version.lombok}",
+            "servlet"                        : "javax.servlet:javax.servlet-api:${version.servlet}"
     ]
 }

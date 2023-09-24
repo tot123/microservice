@@ -92,8 +92,9 @@ project(":microservice_common"){
         api 'com.alibaba:fastjson'
         api 'mysql:mysql-connector-java'
         api 'com.baomidou:mybatis-plus-boot-starter'
-        api 'io.springfox:springfox-swagger2'
-        api 'io.springfox:springfox-swagger-ui'
+        api 'io.springfox:springfox-boot-starter'
+        api 'com.github.xiaoymin:knife4j-spring-boot-starter'
+        api 'org.projectlombok:lombok'
         api 'io.jsonwebtoken:jjwt'
 
 
@@ -109,6 +110,31 @@ project(":microservice_common"){
 //        implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
 //        implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel'
 //        implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
+//        implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+//        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    }
+}
+
+project(":microservice_gateway"){
+    description("尚硅谷微服务实战之网关模块:转发配置")
+    apply plugin : 'java-library'
+    apply plugin: 'org.springframework.boot'
+    //依赖
+    dependencies {
+        api project(':microservice_bean')
+        api project(':microservice_common')
+        api 'org.springframework.boot:spring-boot-starter-web'
+        implementation 'org.springframework.boot:spring-boot-starter-webflux'
+        implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
+//        api 'org.springframework.cloud:spring-cloud-starter-openfeign'
+//        api 'com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel'
+//        api 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
+
+//        implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config'
+//        implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
+//        implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel'
+
 //        implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
 //        testImplementation 'org.springframework.boot:spring-boot-starter-test'
 

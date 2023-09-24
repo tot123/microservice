@@ -19,10 +19,9 @@ public class OrderMainStarterApp {
 
     public static void main(String[] args) {
         try {
-            SpringApplication.run(OrderMainStarterApp.class,args);
-        }catch (Exception ex){
+            SpringApplication.run(OrderMainStarterApp.class, args);
+        } catch (Exception ex){
             ex.printStackTrace();
         }
-
     }
 }

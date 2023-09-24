@@ -1,0 +1,5 @@
+swagger:
+  enable: true
+  application-name: 鉴权配置中心接口
+  application-version: 1.0
+  application-description: 鉴权配置中心

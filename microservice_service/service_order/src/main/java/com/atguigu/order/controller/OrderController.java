@@ -1,15 +1,15 @@
 package com.atguigu.order.controller;
 
 import com.atguigu.bean.OrderInfo;
-import com.atguigu.bean.User;
 import com.atguigu.order.service.OrderService;
+import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 /*====================================================
                 时间: 2022-06-21
@@ -19,6 +19,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/order")
 public class OrderController {
+
+    public  static ConcurrentHashMap<String,  AtomicInteger> map = new ConcurrentHashMap();
 
     @Autowired
     private OrderService orderService;

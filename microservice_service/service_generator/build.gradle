@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'com.atguigu'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    api 'com.baomidou:mybatis-plus-boot-starter'
+    api 'com.baomidou:mybatis-plus-generator'
+    api 'org.apache.velocity:velocity-engine-core'
+    api 'org.freemarker:freemarker'
+//    implementation 'org.springframework.cloud:spring-cloud-alibaba-nacos-discovery:0.9.0.RELEASE'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+bootJar {
+    enabled = false
+}

@@ -1,0 +1,38 @@
+server:
+  profiles:
+    active: dev
+  port: 9999
+
+spring:
+  application:
+    name: service-order
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.9.88:3306/micro
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.9.88:8848
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowCredentials: true
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+      routes:
+        - filters:
+            - RequestTime=true
+            - StripPrefix=1
+          id: core-route
+          predicates:
+            - Path=/core/**
+          uri: xxxxxxxx
+
+
+gateway-config:
+  uriWhitelist:
+    - /v3/api-docs

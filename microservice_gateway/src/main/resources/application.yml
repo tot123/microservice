@@ -6,11 +6,6 @@ server:
 spring:
   application:
     name: service-order
-  datasource:
-    username: root
-    password: 123456
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.9.88:3306/micro
   cloud:
     nacos:
       discovery:

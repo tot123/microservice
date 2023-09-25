@@ -122,9 +122,9 @@ project(":microservice_gateway"){
     apply plugin: 'org.springframework.boot'
     //依赖
     dependencies {
-        api project(':microservice_bean')
-        api project(':microservice_common')
-        api 'org.springframework.boot:spring-boot-starter-web'
+//        api project(':microservice_bean')
+//        api project(':microservice_common')
+//        api 'org.springframework.boot:spring-boot-starter-web'
         implementation 'org.springframework.boot:spring-boot-starter-webflux'
         implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
 //        api 'org.springframework.cloud:spring-cloud-starter-openfeign'
